@@ -58,3 +58,5 @@ Contributions are welcome! If you have suggestions for improvements, feel free t
 ## 🙌 Acknowledgments
 
 - Special thanks to everyone who contributed to the development of this game!
+ ## 📧 Contact
+For questions or support, reach out at gowthamikota25@gmail.com .
