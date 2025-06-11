@@ -3,179 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
+    <title>Enhanced Memory Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-
-        <div class="grid-container">
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon1">&#9728</i>
-
-                    </div>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">🧠 Memory Master</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <div>Moves: <span id="moves">0</span></div>
                 </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon2">&#9729</i>
-                        
-                    </div>
+                <div class="stat">
+                    <div>Time: <span id="time">00:00</span></div>
                 </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon3">&#9730</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon4">&#9827</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon5">&#9733</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon6">&#9752</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon7">&#9829</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon8">&#9830</i>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon1">&#9728</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon2">&#9729</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon3">&#9730</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon4">&#9827</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon5">&#9733</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon6">&#9752</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon7">&#9829</i>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="card">
-                    <div class="front">
-
-                    </div>
-                    <div class="back">
-                        <i class="icon8">&#9830</i>
-                    </div>
+                <div class="stat">
+                    <div>Matches: <span id="matches">0</span>/8</div>
                 </div>
             </div>
         </div>
-        <button class="start-reset">Reset</button>
-    </main>
+
+        <div class="grid-container" id="gameGrid">
+            <!-- Cards will be generated by JavaScript -->
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="newGameBtn">New Game</button>
+            <button class="btn btn-secondary" id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <div class="victory-message" id="victoryMessage">
+        <h2>🎉 Congratulations!</h2>
+        <p>You completed the game!</p>
+        <p>Moves: <span id="finalMoves"></span> | Time: <span id="finalTime"></span></p>
+        <button class="btn btn-primary" onclick="startNewGame()">Play Again</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
